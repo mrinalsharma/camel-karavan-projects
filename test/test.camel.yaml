@@ -10,3 +10,5 @@
     parameters:
       message: hello
       period: 2
+  trace: true
+  autoStartup: true

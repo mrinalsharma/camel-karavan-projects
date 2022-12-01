@@ -3,12 +3,13 @@
   from:
     uri: 'kamelet:timer-source'
     steps:
-      - inArray: true
+      - dslName: LogDefinition
+        stepName: log
+        message: '${body}'
+        inArray: true
         inSteps: true
     dslName: FromDefinition
     stepName: from
     parameters:
+      period: 3
       message: hello
-      period: 2
-  trace: true
-  autoStartup: true

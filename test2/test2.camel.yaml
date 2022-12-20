@@ -1,0 +1,9 @@
+- route:
+    from:
+      uri: kamelet:timer-source
+      steps:
+        - log:
+            message: ${body}
+      parameters:
+        period: 1000
+        message: Hello Sir

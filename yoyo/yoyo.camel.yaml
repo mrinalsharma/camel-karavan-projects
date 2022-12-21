@@ -1,0 +1,11 @@
+- dslName: RouteDefinition
+  stepName: route
+  from:
+    dslName: FromDefinition
+    stepName: from
+    uri: 'kamelet:aws-kinesis-source'
+    steps:
+      - dslName: ClaimCheckDefinition
+        stepName: claimCheck
+        inArray: true
+        inSteps: true

@@ -3,15 +3,12 @@
   from:
     dslName: FromDefinition
     stepName: from
-    uri: 'kamelet:aws-s3-source'
+    uri: 'kamelet:timer-source'
     parameters:
-      accessKey: admin
-      bucketNameOrArn: rrrr
-      region: us-east1
-    id: admin
+      message: hhhh
     steps:
       - dslName: LogDefinition
         stepName: log
-        message: hhhhh
+        message: jjjjj
         inArray: true
         inSteps: true

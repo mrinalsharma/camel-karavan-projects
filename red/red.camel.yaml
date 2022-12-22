@@ -1,15 +1,17 @@
 - dslName: RouteDefinition
   stepName: route
   from:
-    uri: 'kamelet:timer-source'
+    dslName: FromDefinition
+    stepName: from
+    uri: 'kamelet:aws-s3-source'
+    parameters:
+      accessKey: admin
+      bucketNameOrArn: rrrr
+      region: us-east1
+    id: admin
     steps:
       - dslName: LogDefinition
         stepName: log
-        message: '${body}'
+        message: hhhhh
         inArray: true
         inSteps: true
-    dslName: FromDefinition
-    stepName: from
-    parameters:
-      message: hello world
-      period: 1000

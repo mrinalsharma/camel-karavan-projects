@@ -1,0 +1,12 @@
+- dslName: RouteDefinition
+  stepName: route
+  from:
+    dslName: FromDefinition
+    stepName: from
+    uri: 'kamelet:aws-kinesis-source'
+    parameters:
+      accessKey: admin
+    id: admin
+    steps:
+      - inArray: true
+        inSteps: true

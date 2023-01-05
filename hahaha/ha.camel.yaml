@@ -1,0 +1,17 @@
+- dslName: RouteDefinition
+  stepName: route
+  id: route-93de
+  from:
+    dslName: FromDefinition
+    stepName: from
+    uri: 'kamelet:timer-source'
+    id: from-8a71
+    parameters:
+      message: '1111'
+    steps:
+      - dslName: LogDefinition
+        stepName: log
+        message: '1111'
+        id: log-307c
+        inArray: true
+        inSteps: true

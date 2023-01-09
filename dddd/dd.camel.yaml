@@ -6,7 +6,7 @@
       parameters:
         message: Hello Mrinal
         period: 1000
-        repeatCount: 11
+        repeatCount: 500
       steps:
         - log:
             message: ${body}

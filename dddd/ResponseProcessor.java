@@ -2,6 +2,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import javax.inject.Named;
 import javax.inject.Singleton;
+import java.lang.String;
 
 @Singleton
 @Named("ResponseProcessor")
@@ -9,7 +10,7 @@ public class ResponseProcessor implements Processor {
 
   public void process(Exchange exchange) throws Exception {
     System.out.println("Received Data "+ exchange.getIn().getBody());
-    if(exchange.getIn().getBody().toString().equals("quit")) {
+    if(exchange.getIn().getBody(String.class).toString().equals("quit")) {
        System.out.println("received Quit");
        exchange.getOut().setHeader("CamelNettyCloseChannelWhenComplete", true);
     }

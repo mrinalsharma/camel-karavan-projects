@@ -9,6 +9,11 @@ import javax.inject.Singleton;
 public class ResponseProcessor implements Processor {
 
   public void process(Exchange exchange) throws Exception {
-      exchange.getOut().setBody("Hello World");
+    if(exchange.getIn().getBody().equals("quit")) {
+       exchange.getOut().setHeader(NettyConstants.NETTY_CLOSE_CHANNEL_WHEN_COMPLETE, true);
+    }
+    else {
+       exchange.getOut().setBody("Hello from Karavan Pod");
+    }
   }
 }

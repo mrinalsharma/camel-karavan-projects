@@ -17,3 +17,8 @@
               - log:
                   message: '${body}'
                   id: log-7951
+              - to:
+                  uri: 'kamelet:delay-action'
+                  id: to-8374
+                  parameters:
+                    milliseconds: 1000

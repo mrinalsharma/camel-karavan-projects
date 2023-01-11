@@ -1,24 +1,9 @@
 - route:
-    id: route-5783
+    id: route-4bac
     from:
-      uri: 'kamelet:timer-source'
-      id: from-5e74
-      parameters:
-        repeatCount: 1
-        message: Hello Mrinal Sharma
+      uri: 'netty:tcp://0.0.0.0:8000'
+      id: from-b670
       steps:
-        - loop:
-            id: loop-bffb
-            expression:
-              constant:
-                expression: '1000'
-                id: constant-e12b
-            steps:
-              - log:
-                  message: '${exchangeProperty.CamelLoopIndex}'
-                  id: log-7951
-              - to:
-                  uri: 'kamelet:delay-action'
-                  id: to-8374
-                  parameters:
-                    milliseconds: 1000
+        - log:
+            message: '${body}'
+            id: log-31e4

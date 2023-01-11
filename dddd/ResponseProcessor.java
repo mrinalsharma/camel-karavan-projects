@@ -9,7 +9,7 @@ import java.lang.String;
 public class ResponseProcessor implements Processor {
 
   public void process(Exchange exchange) throws Exception {
-    System.out.println("Received Data "+ exchange.getIn().getBody());
+    System.out.println("Received Data "+ exchange.getIn().getBody() + " Length "+exchange.getIn().getBody(String.class).length());
     if(exchange.getIn().getBody(String.class).equals("quit")) {
        System.out.println("received Quit");
        exchange.getOut().setHeader("CamelNettyCloseChannelWhenComplete", true);

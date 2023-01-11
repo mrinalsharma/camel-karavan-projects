@@ -15,7 +15,7 @@
                 id: constant-e12b
             steps:
               - log:
-                  message: ' ${property.CamelLoopIndex}'
+                  message: '${exchangeProperty.CamelLoopIndex}'
                   id: log-7951
               - to:
                   uri: 'kamelet:delay-action'

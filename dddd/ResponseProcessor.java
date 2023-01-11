@@ -9,7 +9,7 @@ public class ResponseProcessor implements Processor {
 
   public void process(Exchange exchange) throws Exception {
     System.out.println("Received Data "+ exchange.getIn().getBody());
-    if(exchange.getIn().getBody().equals("quit")) {
+    if(exchange.getIn().getBody().toString().equals("quit")) {
        System.out.println("received Quit");
        exchange.getOut().setHeader("CamelNettyCloseChannelWhenComplete", true);
     }

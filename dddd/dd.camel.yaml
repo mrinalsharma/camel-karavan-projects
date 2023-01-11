@@ -11,7 +11,7 @@
             id: loop-bffb
             expression:
               constant:
-                expression: 'true'
+                expression: '1000'
                 id: constant-e12b
             steps:
               - log:

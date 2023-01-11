@@ -6,7 +6,7 @@ import java.lang.String;
 
 @Singleton
 @Named("ResponseProcessor")
-public class ResponseProcessor implements Processor {
+public class Responseprocessor implements Processor {
 
   public void process(Exchange exchange) throws Exception {
     if(exchange.getIn().getBody(String.class).contains("quit")) {

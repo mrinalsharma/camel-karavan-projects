@@ -1,13 +1,19 @@
 - route:
-    id: route-198b
+    id: route-5783
     from:
-      uri: kamelet:timer-source
-      id: from-2d32
+      uri: 'kamelet:timer-source'
+      id: from-5e74
       parameters:
-        message: Hello Mrinal
-        period: 1000
-        repeatCount: 500
+        repeatCount: 1
+        message: Hello Mrinal Sharma
       steps:
-        - log:
-            message: ${body}
-            id: log-42ba
+        - loop:
+            id: loop-bffb
+            expression:
+              constant:
+                expression: 'true'
+                id: constant-e12b
+            steps:
+              - log:
+                  message: '${body}'
+                  id: log-7951

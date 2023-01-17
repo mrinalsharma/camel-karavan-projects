@@ -9,6 +9,7 @@ import javax.inject.Singleton;
 public class ProcessUsers implements Processor {
 
   public void process(Exchange exchange) throws Exception {
-      exchange.getOut().setBody("{\"username\":\"mrinal\"}");
+      exchange.getOut().setBody("{\"username\":\"Karavan\"}");
+      exchange.getOut().setHeader(Exchange.HTTP_RESPONSE_CODE, constant(403))
   }
 }

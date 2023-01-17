@@ -10,7 +10,7 @@ public class ProcessUsers implements Processor {
 
   public void process(Exchange exchange) throws Exception {
       if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("POST")) { 
-         System.out.println("Post method :" + exchange.getIn().getBody());
+         System.out.println("Post method :" + exchange.getIn().getBody(String.class));
          exchange.getOut().setHeader(Exchange.HTTP_RESPONSE_CODE, "202");
       }
       else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("DELETE")) {

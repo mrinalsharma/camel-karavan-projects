@@ -16,7 +16,7 @@ public class ProcessUsers implements Processor {
          System.out.println("DELETE method :" + exchange.getIn().getBody());
       }
       else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("GET")) {
-        if(!exchange.getIn().getHeader(Exchange.HTTP_QUERY).isEmpty()) {
+        if(!exchange.getIn().getHeader(Exchange.HTTP_QUERY, String.class).empty()) {
           System.out.println("Received Get with Parameter:" + exchange.getIn().getHeader(Exchange.HTTP_QUERY));
         }
         exchange.getOut().setBody("{\"username\":\"Karavan\"}");

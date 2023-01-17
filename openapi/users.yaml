@@ -1,0 +1,18 @@
+- rest:
+    id: rest-05d2
+    get:
+      - id: get-901b
+        path: /users
+        description: Optional extended description in CommonMark or HTML.
+        produces: application/json
+        to: 'direct:rest1'
+    path: /v1
+- route:
+    id: route-5b45
+    from:
+      uri: 'direct:rest1'
+      id: from-63ca
+      steps:
+        - process:
+            ref: ProcessUsers
+            id: process-91a1

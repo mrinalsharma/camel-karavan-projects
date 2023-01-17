@@ -34,7 +34,7 @@
       - id: post-9770
         param:
           - name: body
-            type: body
+            type: string
             required: true
         path: /users
         consumes: application/json

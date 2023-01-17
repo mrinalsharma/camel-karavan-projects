@@ -14,7 +14,7 @@ public class ProcessUsers implements Processor {
          exchange.getOut().setHeader(Exchange.HTTP_RESPONSE_CODE, "202");
       }
       else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("DELETE")) {
-         System.out.println("DELETE method :" + exchange.getIn().getBody());
+         System.out.println("DELETE method :" + exchange.getIn().getHeader(Exchange.HTTP_PATH));
          exchange.getOut().setHeader(Exchange.HTTP_RESPONSE_CODE, "200");
       }
       else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("GET")) {

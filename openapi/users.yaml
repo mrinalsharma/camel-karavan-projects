@@ -1,45 +1,3 @@
-- rest:
-    id: rest-c531
-    delete:
-      - id: delete-33db
-        param:
-          - name: id
-            type: path
-            dataType: integer
-            description: The user ID.
-            required: true
-        path: '/users/{id}'
-        to: 'direct:rest4'
-    get:
-      - id: get-b4ae
-        path: /users
-        description: Optional extended description in CommonMark or HTML.
-        produces: application/json
-        to: 'direct:rest1'
-      - id: get-e323
-        param:
-          - name: metadata
-            type: query
-            dataType: boolean
-            description: 'If true, the endpoint returns only the user metadata.'
-            required: false
-          - name: id
-            type: path
-            dataType: integer
-            description: The user ID.
-            required: true
-        path: '/users/{id}'
-        to: 'direct:rest3'
-    post:
-      - id: post-9770
-        param:
-          - name: body
-            type: string
-            required: true
-        path: /users
-        consumes: application/json
-        to: 'direct:rest2'
-    path: /v1
 - route:
     id: route-e42a
     from:
@@ -76,3 +34,45 @@
         - process:
             ref: ProcessUsers
             id: process-7025
+- rest:
+    id: rest-c531
+    delete:
+      - id: delete-33db
+        param:
+          - name: id
+            type: path
+            dataType: integer
+            description: The user ID.
+            required: true
+        path: '/users/{id}'
+        to: 'direct:rest4'
+    get:
+      - id: get-b4ae
+        path: /users
+        description: Optional extended description in CommonMark or HTML.
+        produces: application/json
+        to: 'direct:rest1'
+      - id: get-e323
+        param:
+          - name: metadata
+            type: query
+            dataType: boolean
+            description: 'If true, the endpoint returns only the user metadata.'
+            required: false
+          - name: id
+            type: path
+            dataType: integer
+            description: The user ID.
+            required: true
+        path: '/users/{id}'
+        to: 'direct:rest3'
+    post:
+      - id: post-9770
+        param:
+          - name: body
+            type: body
+            required: true
+        path: /users
+        consumes: application/json
+        to: 'direct:rest2'
+    path: /v1

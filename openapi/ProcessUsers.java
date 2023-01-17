@@ -17,7 +17,7 @@ public class ProcessUsers implements Processor {
       }
       else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("GET")) {
         if(!exchange.getIn().getHeader(Exchange.HTTP_PATH, String.class).isEmpty()) {
-          System.out.println("Received Get with HTTP_PATH:" + exchange.getIn().getHeader(Exchange.HTTP_QUERY));
+          System.out.println("Received Get with HTTP_PATH:" + exchange.getIn().getHeader(Exchange.HTTP_PATH));
         }
         exchange.getOut().setBody("{\"username\":\"Karavan\"}");
       }

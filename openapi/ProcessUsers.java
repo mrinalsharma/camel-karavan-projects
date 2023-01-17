@@ -9,10 +9,10 @@ import javax.inject.Singleton;
 public class ProcessUsers implements Processor {
 
   public void process(Exchange exchange) throws Exception {
-      if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equalc("POST")) { 
+      if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("POST")) { 
          System.out.println("Post method :" + exchange.getIn().getBody());
       }
-      else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equalc("DELETE")) {
+      else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("DELETE")) {
          System.out.println("DELETE method :" + exchange.getIn().getBody());
       }
       else  if(exchange.getIn().getHeader(Exchange.HTTP_METHOD).equals("GET")) {

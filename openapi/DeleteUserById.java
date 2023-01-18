@@ -10,6 +10,6 @@ public class DeleteUserById implements Processor {
 
   public void process(Exchange exchange) throws Exception {
       exchange.getOut().setHeader(Exchange.HTTP_RESPONSE_CODE, "200");
-      exchange.getOut().setBody("User Deleted")
+      exchange.getOut().setBody("User Deleted");
   }
 }

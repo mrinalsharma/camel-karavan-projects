@@ -21,7 +21,7 @@
           - name: metadata
             type: query
             dataType: boolean
-            description: 'If true, the endpoint returns only the user metadata.'
+            description: Optional extended description in CommonMark or HTML.
             required: false
           - name: id
             type: path

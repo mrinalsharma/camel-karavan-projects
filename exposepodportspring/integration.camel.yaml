@@ -1,14 +1,15 @@
 - route:
     id: route-4bac
     from:
-      uri: 'netty:tcp://0.0.0.0:8000'
+      uri: netty:tcp://0.0.0.0:8000
       id: from-b670
       parameters:
         keepAlive: true
       steps:
         - log:
-            message: '${body}'
+            message: ${body}
             id: log-31e4
+            logName: Netty Logger
         - process:
             ref: ResponseProcessor
             id: process-7ea2

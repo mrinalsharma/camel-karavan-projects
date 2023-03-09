@@ -8,7 +8,7 @@
         serverPort: '1521'
         username: carriersync
         password: d76cbf7
-        query: select * from carrier_account
+        query: '"select * from carrier_account"'
         databaseName: oradev
       steps:
         - log:

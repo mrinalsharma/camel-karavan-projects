@@ -17,7 +17,7 @@
 apiVersion: camel.apache.org/v1alpha1
 kind: Kamelet
 metadata:
-  name: oracle-database-source-custom
+  name: oracle
   annotations:
     camel.apache.org/kamelet.support.level: "Stable"
     camel.apache.org/catalog.version: "4.0.0-SNAPSHOT"

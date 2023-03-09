@@ -6,7 +6,7 @@
       parameters:
         serverName: cs11-test-db-app-pita.cyvwih0l5pvu.us-east-1.rds.amazonaws.com
         serverPort: '1521'
-        username: oradev
+        username: carriersync
         password: d76cbf7
         query: select * from carrier_account
         databaseName: oradev

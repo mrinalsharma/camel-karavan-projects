@@ -4,7 +4,7 @@
       uri: kamelet:oracle-database-source
       id: from-a810
       parameters:
-        serverName: '@cs11-dev-db-app-dev.c3ymwt3hbcwm.us-east-2.rds.amazonaws.com'
+        serverName: 10.0.28.8
         serverPort: '1521'
         username: carriersync
         password: d76cbf7

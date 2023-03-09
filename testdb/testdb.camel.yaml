@@ -1,16 +1,16 @@
 - route:
-    id: route-f82d
+    id: route-7a18
     from:
-      uri: kamelet:oracle-database-source-custom
-      id: from-382a
+      uri: kamelet:oracle
+      id: from-69ab
       parameters:
         serverName: 10.0.28.8
         serverPort: '1521'
         username: carriersync
         password: d76cbf7
-        databaseName: oradev
         query: select * from carrier_account
+        databaseName: oradev
       steps:
         - log:
             message: ${body}
-            id: log-48ad
+            id: log-5041

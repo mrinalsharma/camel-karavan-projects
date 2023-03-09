@@ -1,0 +1,16 @@
+- route:
+    id: route-eefd
+    from:
+      uri: kamelet:oracle-database-source
+      id: from-a810
+      parameters:
+        serverName: cs11-test-db-app-pita.cyvwih0l5pvu.us-east-1.rds.amazonaws.com
+        serverPort: '1521'
+        username: oradev
+        password: d76cbf7
+        query: select * from carrier_account
+        databaseName: oradev
+      steps:
+        - log:
+            message: ${body}
+            id: log-c45f

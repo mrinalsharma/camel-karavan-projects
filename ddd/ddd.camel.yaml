@@ -9,6 +9,5 @@
         repeatCount: 11
       steps:
         - log:
-            message: ${body}
+            message: 'hello ${body} '
             id: log-42ba
-

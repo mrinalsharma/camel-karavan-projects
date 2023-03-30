@@ -1,0 +1,12 @@
+- route:
+    id: route-ae30
+    from:
+      uri: kamelet:timer-source
+      id: from-7e66
+      parameters:
+        message: hello sharma
+        period: 1000
+      steps:
+        - log:
+            message: ${body}
+            id: log-35df

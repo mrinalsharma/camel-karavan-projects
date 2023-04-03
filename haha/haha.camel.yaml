@@ -1,9 +1,12 @@
 - route:
-    id: route-021d
+    id: route-bf8c
     from:
-      uri: kamelet:earthquake-source
-      id: from-96d7
+      uri: kamelet:oracle-database-source
+      id: from-75c7
+      parameters:
+        username: admin@localhost
+        password: r3@cti0n
       steps:
         - log:
             message: ${body}
-            id: log-693e
+            id: log-3b10

@@ -1,8 +1,8 @@
 - route:
-    id: route-884f
+    id: route-3501
     from:
       uri: kamelet:oracle
-      id: from-4bd8
+      id: from-ecbf
       parameters:
         username: carriersync
         password: d76cbf7
@@ -12,4 +12,4 @@
       steps:
         - log:
             message: ${body}
-            id: log-49d2
+            id: log-7b87

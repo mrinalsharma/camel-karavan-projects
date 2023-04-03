@@ -6,7 +6,7 @@ metadata:
     camel.apache.org/kamelet.type: "source"
 spec:
   definition:
-    title: "Oracle Database Source custom"
+    title: "Earthquake custom"
   template:
     from:
       uri: "timer:earthquake"

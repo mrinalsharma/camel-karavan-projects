@@ -4,8 +4,11 @@
       uri: kamelet:oracle
       id: from-4bd8
       parameters:
-        username: admin@localhost
-        password: r3@cti0n
+        username: carriersync
+        password: d76cbf7
+        serverName: cs11-dev-db-app-dev.c3ymwt3hbcwm.us-east-2.rds.amazonaws.com
+        serverPort: '1521'
+        query: select * from carrier_account
       steps:
         - log:
             message: ${body}

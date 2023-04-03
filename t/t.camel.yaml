@@ -9,6 +9,7 @@
         serverName: cs11-dev-db-app-dev.c3ymwt3hbcwm.us-east-2.rds.amazonaws.com
         serverPort: '1521'
         query: select * from carrier_account
+        databaseName: oradev
       steps:
         - log:
             message: ${body}

@@ -13,7 +13,7 @@ metadata:
     camel.apache.org/kamelet.type: "source"
 spec:
   definition:
-    title: "Oracle Database Source custom"
+    title: "oracle"
     description: |-
       Query data from an Oracle Database.
       In your KameletBinding file, you must explicitly declare the Oracle Database driver dependency in spec->integration->dependencies.

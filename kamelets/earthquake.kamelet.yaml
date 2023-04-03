@@ -13,9 +13,7 @@ spec:
   definition:
     title: "Earthquake custom"
     description: |-
-      Query data from an Oracle Database.
-      In your KameletBinding file, you must explicitly declare the Oracle Database driver dependency in spec->integration->dependencies.
-      - "mvn:com.oracle.database.jdbc:ojdbc11:<version>"
+      EarthQuake Data
   template:
     from:
       uri: "timer:earthquake"

@@ -3,6 +3,8 @@
     from:
       uri: kamelet:earthquake-source
       id: from-cc34
+      parameters:
+        period: 10000
       steps:
         - log:
             message: ${body}

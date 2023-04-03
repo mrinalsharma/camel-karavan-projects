@@ -1,0 +1,12 @@
+- route:
+    id: route-884f
+    from:
+      uri: kamelet:oracle
+      id: from-4bd8
+      parameters:
+        username: admin@localhost
+        password: r3@cti0n
+      steps:
+        - log:
+            message: ${body}
+            id: log-49d2

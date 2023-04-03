@@ -15,7 +15,7 @@ spec:
   definition:
     title: "oracle"
     description: |-
-      Query data from an Oracle Database.
+      Query data from an Oracle Database Custom.
       In your KameletBinding file, you must explicitly declare the Oracle Database driver dependency in spec->integration->dependencies.
       - "mvn:com.oracle.database.jdbc:ojdbc11:<version>"
     required:

@@ -1,16 +1,16 @@
 - route:
-    id: route-3501
+    id: route-15ed
     from:
-      uri: kamelet:oracle
-      id: from-ecbf
+      uri: kamelet:example
+      id: from-5fb8
       parameters:
-        username: carriersync
-        password: d76cbf7
-        serverName: cs11-dev-db-app-dev.c3ymwt3hbcwm.us-east-2.rds.amazonaws.com
-        serverPort: '1521'
-        query: select * from carrier_account
-        databaseName: oradev
+        username: admin@localhost
+        password: r3@cti0n
+        serverName: aaa
+        serverPort: '1234'
+        query: sss
+        databaseName: sss
       steps:
         - log:
             message: ${body}
-            id: log-7b87
+            id: log-2cb7

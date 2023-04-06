@@ -9,3 +9,22 @@
         - log:
             message: ${body}
             id: log-e379
+        - to:
+            uri: kafka
+            id: to-32cf
+            parameters:
+              interceptorClasses: admin@localhost
+              saslJaasConfig: r3@cti0n
+        - split:
+            id: split-af46
+            expression: {}
+            steps:
+              - sort:
+                  id: sort-b80d
+                  expression: {}
+              - to:
+                  uri: kamelet:slack-sink
+                  id: to-9213
+                  parameters:
+                    username: admin@localhost
+                    webhookUrl: r3@cti0n

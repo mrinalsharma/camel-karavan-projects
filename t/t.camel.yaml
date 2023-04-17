@@ -1,0 +1,16 @@
+- route:
+    id: route-15ed
+    from:
+      uri: kamelet:example
+      id: from-5fb8
+      parameters:
+        username: admin@localhost
+        password: r3@cti0n
+        serverName: aaa
+        serverPort: '1234'
+        query: sss
+        databaseName: sss
+      steps:
+        - log:
+            message: ${body}
+            id: log-2cb7

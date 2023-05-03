@@ -5,7 +5,7 @@
         produces: application/json
         consumes: application/json
         bindingMode: json
-        path: /postdata
+        path: /postdata/
         to: direct:ForwardRestData
 - route:
     id: route-d1f8

@@ -20,7 +20,7 @@
     scheme: http
     host: localhost
     port: '8080'
-    apiContextPath: /
+    apiContextPath: /api/
     contextPath: /
     bindingMode: json
     component: platform-http

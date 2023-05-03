@@ -21,7 +21,7 @@
             json:
               id: json-70d2
               library: jackson
-              unmarshalType: Examplemessage.class
+              unmarshalType: Examplemessage
         - log:
             message: ${body}
             id: log-2ac1

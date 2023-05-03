@@ -16,6 +16,6 @@ public class Addglobalproperties {
         camelContext.getGlobalOptions().put("CamelJacksonEnableTypeConverter", "true");
         // Allow Jackson JSON to convert to pojo types also
         // (by default Jackson only converts to String and other simple types)
-        getContext().getGlobalOptions().put("CamelJacksonTypeConverterToPojo", "true");
+        camelContext.getGlobalOptions().put("CamelJacksonTypeConverterToPojo", "true");
     }
 }

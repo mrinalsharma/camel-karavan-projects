@@ -16,11 +16,13 @@
       uri: direct:ForwardRestData
       id: from-a2d3
       steps:
-        - to:
-            uri: language:groovy:e
-            id: to-a9c8
-            parameters:
-              script: result = body * 2 + 1
+        - marshal:
+            id: marshal-4dec
+            json:
+              id: json-b8db
+              library: jackson
+              useDefaultObjectMapper: true
+              unmarshalType: Examplemessage
         - log:
             message: ${body}
             id: log-2ac1

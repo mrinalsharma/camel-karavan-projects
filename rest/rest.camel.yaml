@@ -17,8 +17,8 @@
             message: ${body}
             id: log-2ac1
 - restConfiguration:
-    component: platform-http
     scheme: http
     host: localhost
-    port: '8888'
+    port: '8080'
+    apiContextPath: /
     contextPath: /

@@ -16,12 +16,11 @@
       uri: direct:ForwardRestData
       id: from-a2d3
       steps:
-        - marshal:
-            id: marshal-e223
+        - unmarshal:
+            id: unmarshal-fd79
             json:
-              id: json-b8db
+              id: json-70d2
               library: jackson
-              useDefaultObjectMapper: true
               unmarshalType: Examplemessage.class
         - log:
             message: ${body}

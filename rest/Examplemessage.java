@@ -3,9 +3,11 @@ import org.apache.camel.Processor;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Examplemessage {
 
+@JsonProperty
 public String hello;
 
 public Examplemessage(){

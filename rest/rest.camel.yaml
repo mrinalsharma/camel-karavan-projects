@@ -22,3 +22,4 @@
     port: '8080'
     apiContextPath: /
     contextPath: /
+    bindingMode: json

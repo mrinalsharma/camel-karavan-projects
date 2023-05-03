@@ -18,9 +18,10 @@
             id: log-2ac1
 - restConfiguration:
     scheme: http
-    host: localhost
-    port: '8080'
+    host: ec2-18-118-112-66.us-east-2.compute.amazonaws.com
+    port: '30014'
     apiContextPath: /api/
     contextPath: /
     bindingMode: json
     component: platform-http
+    inlineRoutes: false

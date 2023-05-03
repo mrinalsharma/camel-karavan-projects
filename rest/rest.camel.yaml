@@ -23,3 +23,4 @@
     apiContextPath: /
     contextPath: /
     bindingMode: json
+    component: platform-http

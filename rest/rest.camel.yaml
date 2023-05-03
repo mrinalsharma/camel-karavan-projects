@@ -17,7 +17,7 @@
       id: from-a2d3
       steps:
         - to:
-            uri: language:js:e
+            uri: language:javascript:e
             id: to-a9c8
             parameters:
               script: result = body * 2 + 1

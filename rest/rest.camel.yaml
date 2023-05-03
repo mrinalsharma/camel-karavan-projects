@@ -16,6 +16,11 @@
       uri: direct:ForwardRestData
       id: from-a2d3
       steps:
+        - to:
+            uri: language:js:e
+            id: to-a9c8
+            parameters:
+              script: result = body * 2 + 1
         - log:
             message: ${body}
             id: log-2ac1

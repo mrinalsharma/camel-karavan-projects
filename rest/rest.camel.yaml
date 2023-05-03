@@ -1,12 +1,3 @@
-- route:
-    id: route-d1f8
-    from:
-      uri: direct:ForwardRestData
-      id: from-a2d3
-      steps:
-        - log:
-            message: ${body}
-            id: log-2ac1
 - rest:
     id: rest-cb69
     post:
@@ -19,3 +10,12 @@
         path: /postdata/
         to: direct:ForwardRestData
     bindingMode: json
+- route:
+    id: route-d1f8
+    from:
+      uri: direct:ForwardRestData
+      id: from-a2d3
+      steps:
+        - log:
+            message: ${body}
+            id: log-2ac1

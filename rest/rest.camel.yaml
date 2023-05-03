@@ -9,6 +9,16 @@
     post:
       - id: post-924c
         produces: application/json
-        to: /postData
         consumes: application/json
         bindingMode: json
+        path: /postdata
+        to: direct:ForwardRestData
+- route:
+    id: route-d1f8
+    from:
+      uri: direct:ForwardRestData
+      id: from-a2d3
+      steps:
+        - log:
+            message: ${body}
+            id: log-2ac1

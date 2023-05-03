@@ -17,7 +17,7 @@
             message: ${body}
             id: log-2ac1
 - restConfiguration:
-    component: servlet
+    component: undertow
     scheme: http
     host: localhost
     port: '8888'

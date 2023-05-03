@@ -1,0 +1,14 @@
+- restConfiguration:
+    component: undertow
+    scheme: http
+    host: localhost
+    port: '8888'
+    contextPath: /
+- rest:
+    id: rest-cb69
+    post:
+      - id: post-924c
+        produces: application/json
+        to: /postData
+        consumes: application/json
+        bindingMode: json

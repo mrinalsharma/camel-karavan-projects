@@ -24,4 +24,4 @@
     contextPath: /
     bindingMode: json
     component: platform-http
-    inlineRoutes: false
+

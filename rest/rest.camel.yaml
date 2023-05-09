@@ -1,3 +1,8 @@
+- restConfiguration:
+    component: platform-http
+    scheme: http
+    host: localhost
+    port: '8080'
 - rest:
     id: rest-52ea
     get:
@@ -6,23 +11,17 @@
         produces: application/json
         to: direct:HandleMessage
 - route:
-    id: route-ea21
+    id: route-0ebf
     from:
-      uri: direct:HandleMessage
-      id: from-eb26
+      uri: kamelet:oracle
+      id: from-da77
+      parameters:
+        serverName: cs11-dev-db-app-dev.c3ymwt3hbcwm.us-east-2.rds.amazonaws.com
+        databaseName: carriersync
+        password: d76cbf7
+        username: ORADEV
+        query: select * from carrier_account
       steps:
-        - to:
-            uri: kamelet:oracle-database-sink
-            id: to-52c8
-            parameters:
-              serverName: cs11-test-db-app-pita.cyvwih0l5pvu.us-east-1.rds.amazonaws.com
-              serverPort: '1521'
-              username: carriersync
-              password: d76cbf7
-              query: select * from carrier_account
-              databaseName: ORADEV
-- restConfiguration:
-    component: platform-http
-    scheme: http
-    host: localhost
-    port: '8080'
+        - log:
+            message: ${body}
+            id: log-3334

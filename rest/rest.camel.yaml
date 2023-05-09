@@ -1,27 +1,16 @@
-- rest:
-    id: rest-cb69
-    post:
-      - id: post-924c
-        param:
-          - {}
-        produces: application/json
-        consumes: application/json
-        bindingMode: json
-        path: /postdata/
-        to: direct:ForwardRestData
-    bindingMode: json
 - route:
     id: route-d1f8
     from:
       uri: direct:ForwardRestData
       id: from-a2d3
       steps:
-        - unmarshal:
-            id: unmarshal-fd79
-            json:
-              id: json-70d2
-              library: jackson
-              unmarshalType: Examplemessage
         - log:
             message: ${body}
-            id: log-2ac1
+            id: log-b8d7
+- rest:
+    id: rest-cb69
+    get:
+      - id: get-ef63
+        consumes: application/json
+        path: /api/reservations
+    bindingMode: json

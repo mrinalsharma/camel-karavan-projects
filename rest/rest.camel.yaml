@@ -1,0 +1,23 @@
+- rest:
+    id: rest-52ea
+    get:
+      - id: get-aad2
+        path: /api/reservations
+        produces: application/json
+        to: direct:HandleMessage
+- route:
+    id: route-ea21
+    from:
+      uri: direct:HandleMessage
+      id: from-eb26
+      steps:
+        - to:
+            uri: kamelet:oracle-database-sink
+            id: to-52c8
+            parameters:
+              serverName: cs11-test-db-app-pita.cyvwih0l5pvu.us-east-1.rds.amazonaws.com
+              serverPort: '1521'
+              username: carriersync
+              password: d76cbf7
+              query: select * from carrier_account
+              databaseName: ORADEV
